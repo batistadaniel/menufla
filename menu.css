@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+#background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;   
+}
+
+#background video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#background::after {
+    content: '';
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.507) 15%, rgba(10, 12, 16, 0.523) 50%, rgba(10, 12, 16, 0.835) 85%);
+}
+
+main {
+    margin-top: 70px;
+}
+
+.menu-main nav ul{
+    display: flex;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+  
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    padding: 10px 30px;
+    text-align: center;
+    border: 1.5px solid #525252;
+    white-space: nowrap;
+    cursor: pointer;
+    background-color: #252525;
+    color: #fff;
+    font-size: 16px;
+}
+.section {
+    display: none;
+}
+
+li:first-child button {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+li:last-child button {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+button:focus {
+    background-color: #c3281e;
+    border-color: #f00a0a;
+
+}
+
+section {
+    display: none;
+    flex-direction: column;
+    margin: 50px auto;
+    gap: 20px;
+    padding: 50px 50px;
+    background-color: #fff;
+    width: 92%;
+    border-radius: 10px;
+}
+.lista {
+    border-left: 5px solid #c3281e ;
+    margin-left: 40px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.lista li {
+    list-style-type: disc;
+    margin-left: 30px;    
+    
+}
+.imagens {
+    display: grid;
+    gap: 15px;
+    align-items: end;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.imagens img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+.fontes {
+    color: #c3281e;
+    font-size: 20px;
+    font-style: italic;
+    text-decoration: underline;
+    
+}
+
+.fontes span::before {
+    content: '\1F517'; 
+    margin-right: 8px; 
+    font-size: 20px; 
+}
+
+/* @media screen and (max-width: 1024px) {
+    section {
+        padding: 50px 100px; 
+    }
+} */
+
+@media screen and (max-width: 768px) {
+    .titulo {
+        display: none;
+    }
+
+    .menu-main {
+        display: none;
+    }
+    section {
+        padding: 30px 20px;
+    }
+
+    .imagens img {
+        width: 100%;
+        height: auto;
+    }
+
+}
